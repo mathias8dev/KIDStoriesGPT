@@ -27,7 +27,7 @@ This project is just an example of the implementation of a sentiment classifier 
    ```shell
    pip install -r requirements.txt
    ```
-4. Create OpenAI API Key and add it to your .env file:
+4. Create OpenAI API Key here:
    [openai](https://platform.openai.com/)
 
 5. Setup api key
