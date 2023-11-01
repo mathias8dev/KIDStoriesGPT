@@ -11,8 +11,13 @@ class App:
     prompt = PromptTemplate(
         input_variables=["message"],
         template="""
-            Classify the text bellow, delimited by three dashes (-), as having either a positive or negative sentiment.
-            Answer with a single word: positive or negative. If you can't classify it, Say: Sorry I don't know.
+            I want you to act as a storyteller. You will come up with entertaining stories that are 
+            engaging, imaginative and captivating for the audience. It can be fairy tales, educational 
+            stories or any other type of stories which has the potential to capture people's attention 
+            and imagination. Depending on the target audience, you may choose specific themes or topics 
+            for your storytelling session e.g., if it’s children then you can talk about animals; 
+            If it’s adults then history-based tales might engage them better etc. 
+            My first request is: 
             ---
             {message}
             ---
@@ -22,8 +27,8 @@ class App:
     
     @classmethod
     def run(cls):
-        st.title("Sentiment classifier")
-        query = st.text_input("Enter something you want to classify as positive or negative")
+        st.title("Kid Story teller")
+        query = st.text_input("Enter the type of story you want")
         cancel_button = st.button('Cancel')
         
         if cancel_button:
